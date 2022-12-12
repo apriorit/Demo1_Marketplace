@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Marketplace.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Marketplace.Api.Controllers.ElasticController.Get(System.String)">
+            <summary>
+            Executes query:
+            POST my_index/_search
+               "query": {
+                   "bool": {
+                       "filter": [
+                           { "term": { "isactive": true }},
+                           { "query_string": { "query": _query_ }}
+                       ]
+                   }
+               }
+            Please see the syntax for "query" here: https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax
+            </summary>
+            <param name="query"></param>
+            <returns>matched documents</returns>
+        </member>
+        <member name="T:Marketplace.Api.Helpers.AuthorizeOperationFilter">
+            <summary>
+            This operation filter tells swagger document which endpoints
+            require an access token to work and these endpoints return
+            401 and 403 responses.
+            </summary>
+        </member>
+        <member name="M:Marketplace.Api.Helpers.AuthorizeOperationFilter.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:Marketplace.Api.Helpers.Validation.ValidationError">
+            <summary>
+            Class for validation error
+            </summary>
+        </member>
+        <member name="P:Marketplace.Api.Helpers.Validation.ValidationError.Field">
+            <summary>
+            Name of field for whick validation failed
+            </summary>
+        </member>
+        <member name="P:Marketplace.Api.Helpers.Validation.ValidationError.Message">
+            <summary>
+            Description of validation error.
+            </summary>
+        </member>
+        <member name="M:Marketplace.Api.Helpers.Validation.ValidationError.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the of the <see cref="T:Marketplace.Api.Helpers.Validation.ValidationError"/> class.
+            </summary>
+            <param name="field"></param>
+            <param name="message"></param>
+        </member>
+        <member name="T:Marketplace.Api.Helpers.Validation.ValidationResultModel">
+            <summary>
+            Represents result of model validation
+            </summary>
+        </member>
+        <member name="P:Marketplace.Api.Helpers.Validation.ValidationResultModel.Error">
+            <summary>
+            List of errors occured while validation
+            </summary>
+        </member>
+    </members>
+</doc>

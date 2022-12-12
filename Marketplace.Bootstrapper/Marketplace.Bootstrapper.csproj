@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.4.0" />
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="6.0.11" />
+    <PackageReference Include="Elastic.Clients.Elasticsearch" Version="8.0.0-beta.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Marketplace.Integrations.ElasticSearch\Marketplace.Integrations.ElasticSearch.csproj" />
+    <ProjectReference Include="..\Marketplace.Integrations.Payments.LiqPay\Marketplace.Integrations.Payments.LiqPay.csproj" />
+    <ProjectReference Include="..\Marketplace.Integrations.Payments.Stripe\Marketplace.Integrations.Payments.Stripe.csproj" />
+    <ProjectReference Include="..\Marketplace.Services\Marketplace.Services.csproj" />
+  </ItemGroup>
+
+</Project>
