@@ -3,11 +3,12 @@ Detail documentation:
 
 Before start:
  - Install Elastic + Kibana + Filebeat + Logstash
-   - Setup elastic cluster, logging via Filebea: Docs\LoggingViaFilebeat+Elasticsearch.docx
-   - Setup synchronizing with DB:  Docs\ElasticsearchRDB_sync.docx
+   - Setup elastic cluster, logging via Filebea: Docs\WIKI\LoggingViaFilebeat+Elasticsearch.pdf
+   - Setup synchronizing with DB:  Docs\WIKI\ElasticsearchRDB_sync.pdfAuthorization.pdf
  - Enable https endpoint: https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-tutorial-dotnet-app-enable-https-endpoint.
- - Add a self-signed certificate to make Identity server work. From PowerShell, run command 
+ - Add a self-signed certificate to make Identity Server work. From PowerShell, run command 
 C:\program files\microsoft sdks\service fabric\clustersetup\secure> .\CertSetup.ps1 -Install -CertSubjectName CN=mytestcert
+For more details - please read Docs\WIKI\Authorization.pdf
 
 
 To start the project:
